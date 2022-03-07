@@ -1,6 +1,6 @@
 {
   "name": "react-tile-map",
-  "version": "0.3.2",
+  "version": "0.0.1",
   "description": "",
   "main": "lib/index.js",
   "typings": "lib/src/index.d.ts",
@@ -9,7 +9,7 @@
     "build": "rimraf lib && webpack --config webpack.config.js && rimraf lib/stories",
     "build-storybook": "build-storybook",
     "prepublish": "npm run build",
-    "deploy": "npm run build-storybook && now alias $(now storybook-static --public) tile-map --scope=decentraland"
+    "deploy": "npm run build-storybook && now alias $(now storybook-static --public) tile-map --scope=wiicamp"
   },
   "keywords": [],
   "author": "",
