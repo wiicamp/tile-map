@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { AutoSizer } from 'react-virtualized'
+import { AutoSizer, Size } from 'react-virtualized'
 
 import { TileMap } from './TileMap'
 import { Props } from './TileMap.types'
@@ -11,7 +11,10 @@ delete resizableDefaultProps.height
 
 export class ResizableTileMap extends React.PureComponent<ResizableProps> {
   static defaultProps = resizableDefaultProps
+
+  renderComponent = (props: Size) => <TileMap {...props} {...this.props} />
+
   render() {
-    return <AutoSizer>{props => <TileMap {...props} {...this.props} />}</AutoSizer>
+    return <AutoSizer>{this.renderComponent}</AutoSizer>
   }
 }
